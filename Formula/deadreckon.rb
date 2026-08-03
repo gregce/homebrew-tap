@@ -5,21 +5,21 @@ require "time"
 class Deadreckon < Formula
   desc "Long-running, BYOK, sandboxed agentic CLI harness."
   homepage "https://github.com/gregce/deadreckon"
-  version "0.7.0"
+  version "0.8.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.7.0/deadreckon-aarch64-apple-darwin.tar.xz"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.0/deadreckon-aarch64-apple-darwin.tar.xz"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.7.0/deadreckon-x86_64-apple-darwin.tar.xz"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.0/deadreckon-x86_64-apple-darwin.tar.xz"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.7.0/deadreckon-aarch64-unknown-linux-gnu.tar.xz"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.0/deadreckon-aarch64-unknown-linux-gnu.tar.xz"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.7.0/deadreckon-x86_64-unknown-linux-gnu.tar.xz"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.0/deadreckon-x86_64-unknown-linux-gnu.tar.xz"
     end
   end
   license "MIT"
@@ -67,16 +67,16 @@ class Deadreckon < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "deadreckon", "dr-gate"
+      bin.install "deadreckon", "dr-capture", "dr-gate", "dr-gate-evaluator-aarch64-unknown-linux-musl", "dr-gate-evaluator-x86_64-unknown-linux-musl"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "deadreckon", "dr-gate"
+      bin.install "deadreckon", "dr-capture", "dr-gate", "dr-gate-evaluator-aarch64-unknown-linux-musl", "dr-gate-evaluator-x86_64-unknown-linux-musl"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "deadreckon", "dr-gate"
+      bin.install "deadreckon", "dr-capture", "dr-gate", "dr-gate-evaluator-aarch64-unknown-linux-musl", "dr-gate-evaluator-x86_64-unknown-linux-musl"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "deadreckon", "dr-gate"
+      bin.install "deadreckon", "dr-capture", "dr-gate", "dr-gate-evaluator-aarch64-unknown-linux-musl", "dr-gate-evaluator-x86_64-unknown-linux-musl"
     end
 
     install_binary_aliases!
