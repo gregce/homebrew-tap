@@ -5,25 +5,25 @@ require "time"
 class Deadreckon < Formula
   desc "Long-running, BYOK, sandboxed agentic CLI harness."
   homepage "https://github.com/gregce/deadreckon"
-  version "0.8.7"
+  version "0.8.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.8.7/deadreckon-aarch64-apple-darwin.tar.xz"
-      sha256 "9b496b3869dab84636165a7a2260112b44f70428beb936d7844f61b8103ade42"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.8/deadreckon-aarch64-apple-darwin.tar.xz"
+      sha256 "1cb3b9948d0c4bcf0302f8cf32967838e74854d43d6da8734fbba21fc7b6929a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.8.7/deadreckon-x86_64-apple-darwin.tar.xz"
-      sha256 "56858b89fe3f262ab9657e51f8ddbcbf132a0225e4c9145c28ba6d927fbba2b4"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.8/deadreckon-x86_64-apple-darwin.tar.xz"
+      sha256 "4a5118108cddd2ef65027ab09bd693afd5a9f41529e647f18e2ec85438ae0ed3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.8.7/deadreckon-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "63bf329d25182d207c1e2eac8c75f49098daec9d3d919fa14e44581bd3914653"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.8/deadreckon-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "94d02638530bb07b0d389306fa5eb15d905f51cac8138d9abb5b1af9e1a6f877"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/gregce/deadreckon/releases/download/v0.8.7/deadreckon-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "676a6710d0806681edbb72a0a69658736469a29e40bcbb6c3b340d1af1ce260d"
+      url "https://github.com/gregce/deadreckon/releases/download/v0.8.8/deadreckon-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3f6f8b23426731cbdfdada5cd3844c9aae4cf76a38cdf3a44126147255975ae4"
     end
   end
   license "MIT"
